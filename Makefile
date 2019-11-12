@@ -54,15 +54,12 @@ lint: ## check style with flake8
 	flake8 python_boilerplate tests
 
 test: ## run tests quickly with the default Python
-	py.test
+	py.test --cov=python_boilerplate --cov-append --cov-report=html
 
 test-all: ## run tests on every Python version with tox
 	tox
 
-coverage: ## check code coverage quickly with the default Python
-	coverage run --source python_boilerplate -m pytest
-	coverage report -m
-	coverage html
+coverage: test ## check code coverage quickly with the default Python
 	$(BROWSER) htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
