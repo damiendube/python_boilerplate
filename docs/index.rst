@@ -1,5 +1,5 @@
 Welcome to Python Boilerplate's documentation!
-======================================
+==============================================
 
 .. toctree::
    :maxdepth: 2
